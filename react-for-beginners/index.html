@@ -16,9 +16,9 @@
     <script type="text/babel">
         const root = document.getElementById("root");
         function App() {
-            const [counter, modifier] = React.useState(0);
+            const [counter, setCounter] = React.useState(0);
             const onClick = () => {
-                modifier(counter + 1);
+                setCounter(counter + 1);
                 // modifier(counter += 1)
                 // read-only 에러 발생. counter 초깃값 자체를 수정하기 때문에
             };
