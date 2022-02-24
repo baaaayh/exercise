@@ -16,11 +16,17 @@
     <script type="text/babel">
         const root = document.getElementById("root");
         function App() {
-            const [counter, modifier] = React.useState(0);
+            let [counter, modifier] = React.useState(0);
+            // const -> let
+            // const로 선언했을 경우 onClick 함수에서 counter 값을 변경할 수 없음.
+            const onClick = () => {
+                counter = counter + 1;
+                console.log(counter);
+            };
             return (
                 <div>
                     <h3>Total Clicks: {counter}</h3>
-                    <button>Click me</button>
+                    <button onClick={onClick}>Click me</button>
                 </div>
             );
         }
