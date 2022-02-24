@@ -16,15 +16,10 @@
     <script type="text/babel">
         const root = document.getElementById("root");
         function App() {
-            const data = React.useState();
-            console.log(data);
-            /* 
-                [undefined, f] 출력.
-                배열 안의 함수는 data를 바꿔주는 함수.
-            */
+            const [counter, modifier] = React.useState(0);
             return (
                 <div>
-                    <h3>Total Clicks: {0}</h3>
+                    <h3>Total Clicks: {counter}</h3>
                     <button>Click me</button>
                 </div>
             );
