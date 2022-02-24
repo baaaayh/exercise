@@ -15,7 +15,9 @@
     <title>Document</title>
     <script type="text/babel">
         const root = document.getElementById("root");
-        function Container() {
+        function App() {
+            const data = React.useState();
+            console.log(data);
             return (
                 <div>
                     <h3>Total Clicks: {0}</h3>
@@ -23,5 +25,6 @@
                 </div>
             );
         }
+        ReactDOM.render(<App />, root);
     </script>
 </html>
